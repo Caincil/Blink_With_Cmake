@@ -4,9 +4,9 @@
         {
             "type": "shell",
             "label": "cmake",
-            "command": "cmake --build .",
+            "command": "cmake --build ${workspaceFolder}/build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "group": {
                 "kind": "build",
@@ -14,7 +14,7 @@
             },
             "problemMatcher": {
                 "base": "$gcc", 
-                "fileLocation": ["relative", "${workspaceFolder}/build"]
+                "fileLocation": ["relative", "${workspaceFolder}/build}"]
             }
         }
     ]
