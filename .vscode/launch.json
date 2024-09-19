@@ -8,7 +8,7 @@
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
-            "preLaunchTask": "cmake",
+            "preLaunchTask": "Build Project",
             // Add you svd file
             "svdFile": "${workspaceRoot}/STM32F103xx.svd",
             // Set you programmer and trget controller
@@ -16,7 +16,7 @@
                 "${workspaceRoot}/stlink.cfg",
                 "${workspaceRoot}/stm32f103.cfg",              
             ],
- 
+            "gdbPath": "/usr/bin/gdb-multiarch", // Use environment variable for GDB path
             "swoConfig": {
                 "enabled": true,
                 "cpuFrequency": 8000000,

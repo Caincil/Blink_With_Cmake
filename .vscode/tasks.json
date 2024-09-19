@@ -3,8 +3,24 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "cmake",
-            "command": "cmake --build ${workspaceFolder}/build",
+            "label": "Configure Cmake",
+            "command": "cmake . -B  build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "base": "$gcc", 
+                "fileLocation": ["relative", "${workspaceFolder}/build}"]
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build Project",
+            "command": "cmake --build build",
             "options": {
                 "cwd": "${workspaceFolder}"
             },

@@ -20,11 +20,11 @@ cmake_minimum_required(VERSION 3.17)
 	set(MCPU cortex-m4)
 	 
 	# Uncomment for hardware floating point
-	add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
-	add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
-	add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
+	# add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+	# add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
+	# add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 	 
-	Uncomment for software floating point
+	# Uncomment for software floating point
 	add_compile_options(-mfloat-abi=soft)
 	add_compile_options(-mcpu=${MCPU} -mthumb -mthumb-interwork)
 	add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
@@ -51,7 +51,7 @@ cmake_minimum_required(VERSION 3.17)
 	        ${CMAKE_SOURCE_DIR}/Core/Inc
 	        ${CMAKE_SOURCE_DIR}/Drivers/STM32F1xx_HAL_Driver/Inc
 	        ${CMAKE_SOURCE_DIR}/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
-	        ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/Device/Include
+	        ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/Device/ST/STM32F1xx/Include
 	        ${CMAKE_SOURCE_DIR}/Drivers/CMSIS/Include
 	        )
 	 
