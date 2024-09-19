@@ -68,8 +68,8 @@ cmake_minimum_required(VERSION 3.17)
 	# Add lincer file
 	set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103RBTx_FLASH.ld)
 	 
-	# this options for C
-	#add_link_options(-specs=nosys.specs -lstdc++)
+	# this options for C++
+	add_link_options(-specs=nosys.specs -lstdc++)
 	add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 	add_link_options(-mcpu=${MCPU} -mthumb -mthumb-interwork)
     add_link_options(-u _printf_float)
